@@ -2,15 +2,15 @@
   "type": "mysql",
   "host": "localhost",
   "port": 3306,
-  "username": "bbvs",
-  "password": "Password$$",
+  "username": "root",
+  "password": "password",
   "database": "bbvs",
-  "synchronize": false,
+  "synchronize": false,   
   "logging": true,
   "cli": {
     "migrationsDir": "src/migration"
   },
   "entities": ["src/entity/**/*.ts"],
   "migrations": ["src/migration/**/*.ts"],
-  "subscribers": ["src/subscriber/**/*.ts"]
+  "subscribers": ["src/subscriber/**/*.ts"] 
 }

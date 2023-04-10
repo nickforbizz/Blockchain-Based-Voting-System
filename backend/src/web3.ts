@@ -1,9 +1,12 @@
+require('dotenv').config();
 import Web3 from "web3";
 import data from "../build/contracts/Election.json";
 
-export const web3 = new Web3("http://localhost:7545");
+const web3_port = process.env.WEB3_PORT || 7545;
+const web3_url = `http://localhost:${web3_port}`;
+export const web3 = new Web3(web3_url);
 
-const provider = new Web3.providers.HttpProvider("http://localhost:7545");
+const provider = new Web3.providers.HttpProvider(web3_url);
 const contract = require("@truffle/contract");
 
 const ElectionContract = contract(data);
